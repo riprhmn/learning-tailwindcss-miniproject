@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary:#147fad;
+    --color-dark:#0f172b;
+    --color-secondary:#62748e;
+    /* ngatur screen */
+    --breakpoint-2xl: 1320px;
+}
+/* 3. Mengatur Container (Center & Padding) */
+/* Di v4, konfigurasi container dilakukan dengan memodifikasi utility-nya langsung */
+@utility container{
+    margin-inline: auto; /* Ini pengganti 'center: true' */
+    padding-inline: 16px; /* Ini pengganti "padding: '16px'" */
+    
+}
+
+@utility hamburger-line {
+  @apply w-7.5 h-0.5 my-2 block bg-dark;
+}
+
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+}
+
